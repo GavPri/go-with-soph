@@ -4,7 +4,6 @@ const Home = () => {
   return (
     <div className="h-fit max-w-screen bg-body">
       {/* hero-image */}
-      
       <img
         src="/images/nevadaFalls.JPG"
         alt="Sophie at the top of nevada falls"

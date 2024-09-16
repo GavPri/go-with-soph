@@ -71,19 +71,22 @@ const NavigationBar = () => {
   const NavLinks = () => {
     return (
       <>
-        <Link className="p-4" to="/">
+        <Link className="p-4 text-2xl md:text-xl md:font-bold" to="/">
           Home
         </Link>
-        <Link className="p-4" to="/about">
+        <Link className="p-4 text-2xl md:text-xl md:font-bold" to="/about">
           About
         </Link>
-        <Link className="p-4" to="/contact">
+        <Link className="p-4 text-2xl md:text-xl md:font-bold" to="/contact">
           Contact
         </Link>
-        <Link className="p-4" to="/destinations">
+        <Link
+          className="p-4 text-2xl md:text-xl md:font-bold"
+          to="/destinations"
+        >
           Destinations
         </Link>
-        <Link className="p-4" to="/blog">
+        <Link className="p-4 text-2xl md:text-xl md:font-bold" to="/blog">
           Blog
         </Link>
         <button
@@ -102,11 +105,11 @@ const NavigationBar = () => {
           openHamburgerMenu
             ? "max-h-[calc(100%-96px)] bg-body"
             : "max-h-0 bg-transparent"
-        } w-screen bg-body absolute left-0 top-24 transition-all duration-500 ease-in-out`}
+        } w-screen absolute left-0 top-24 transition-all duration-500 ease-in-out`}
       >
         {openHamburgerMenu && (
           <div
-            className="w-full flex flex-col gap-2 items-center justify-between pb-4 text-text font-qs"
+            className="w-full flex flex-col gap-2 items-center justify-between pb-4 text-text font-qs bg-body opacity-90"
             onClick={handleHamburgerMenu}
           >
             <NavLinks />
