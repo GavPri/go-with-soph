@@ -6,13 +6,16 @@ import {
   Route,
   Outlet,
 } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   // * Router
   const router = createBrowserRouter(
-    createRoutesFromElements(<Route path="/" element={<Root />}>
-      
-    </Route>)
+    createRoutesFromElements(
+      <Route path="/" element={<Root />}>
+        <Route index element={<Home />}></Route>
+      </Route>
+    )
   );
 
   // * useEffect to handle theme changes
