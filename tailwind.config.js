@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        qs: ["Quicksand", "san-serif"],
+      },
       colors: {
         body: "rgba(var(--body))",
         text: "rgba(var(--text))",

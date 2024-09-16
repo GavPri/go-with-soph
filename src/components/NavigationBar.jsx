@@ -35,7 +35,7 @@ const NavigationBar = () => {
   const HamburgerMenuIcon = () => {
     return (
       <div
-        className="h-4 w-6 relative bg-body cursor-pointer transition-all"
+        className="h-4 w-6 relative bg-body cursor-pointer transition-all md:hidden"
         onClick={handleHamburgerMenu}
       >
         {/* Top line (shrinks when menu is open) */}
@@ -68,6 +68,30 @@ const NavigationBar = () => {
       </div>
     );
   };
+  const NavLinks = () => {
+    return (
+      <>
+        <Link className="p-4" to="/">
+          Home
+        </Link>
+        <Link className="p-4" to="/about">
+          About
+        </Link>
+        <Link className="p-4" to="/contact">
+          Contact
+        </Link>
+        <Link className="p-4" to="/destinations">
+          Destinations
+        </Link>
+        <button
+          className="rounded-full bg-text h-6 w-fit text-accentPrimary flex justify-center items-center p-4"
+          onClick={handleColorSchemeChange}
+        >
+          Change Theme <LuSun className="pl-1" />
+        </button>
+      </>
+    );
+  };
   const MobileDropDownMenu = () => {
     return (
       <div
@@ -79,27 +103,10 @@ const NavigationBar = () => {
       >
         {openHamburgerMenu && (
           <div
-            className="w-full flex flex-col gap-2 items-center justify-between"
+            className="w-full flex flex-col gap-2 items-center justify-between pb-4 text-text font-qs"
             onClick={handleHamburgerMenu}
           >
-            <Link className="p-4" to="/">
-              Home
-            </Link>
-            <Link className="p-4" to="/about">
-              About
-            </Link>
-            <Link className="p-4" to="/contact">
-              Contact
-            </Link>
-            <Link className="p-4" to="/destinations">
-              Destinations
-            </Link>
-            <button
-              className="rounded-full bg-text h-6 w-fit text-accentPrimary flex justify-center items-center p-4"
-              onClick={handleColorSchemeChange}
-            >
-              Change Theme <LuSun className="pl-1" />
-            </button>
+            <NavLinks />
           </div>
         )}
       </div>
@@ -108,7 +115,7 @@ const NavigationBar = () => {
 
   return (
     <div className="w-screen h-24 bg-body flex justify-between items-center p-6">
-      <h1 className="text-text font-bold">GoWithSoph</h1>
+      <h1 className="text-text font-bold font-qs">GoWithSoph</h1>
       <HamburgerMenuIcon />
       <MobileDropDownMenu />
     </div>
