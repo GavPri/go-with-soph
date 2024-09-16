@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import NavigationBar from "./components/NavigationBar";
 
 function App() {
   // * useEffect to handle theme changes
@@ -28,11 +29,7 @@ function App() {
   };
   return (
     <div className="bg-body">
-      <h1 className="text-text text-3xl font-bold font-mono">GoWithSoph!</h1>
-      <button
-        className="bg-accentPrimary h-10 w-24"
-        onClick={handleColorSchemeChange}
-      ></button>
+      <NavigationBar />
     </div>
   );
 }
