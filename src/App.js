@@ -4,14 +4,16 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
+  Outlet,
 } from "react-router-dom";
 
 function App() {
   // * Router
-  const router = createBrowserRouter(createRoutesFromElements(
-    <Route path="/" element={<Root />} 
-    ></Route>
-  ));
+  const router = createBrowserRouter(
+    createRoutesFromElements(<Route path="/" element={<Root />}>
+      
+    </Route>)
+  );
 
   // * useEffect to handle theme changes
   useEffect(() => {
@@ -38,11 +40,16 @@ function App() {
 
     setselectedColorScheme(newTheme);
   };
-  return (
-    <div className="bg-body">
-      <NavigationBar />
-    </div>
-  );
+  return <div className="bg-body">{/* <NavigationBar /> */}</div>;
 }
+
+const Root = () => {
+  return (
+    <>
+      <NavigationBar />
+      <Outlet />
+    </>
+  );
+};
 
 export default App;
