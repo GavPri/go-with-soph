@@ -1,5 +1,14 @@
+import { useEffect } from "react";
+
 function App() {
-  return <h1 className="text-3xl font-bold">Go with Soph!</h1>;
+  return (
+    <div className="light w-screen h-screen">
+      <div className="h-full w-full bg-body">
+        <p>Hello, world!</p>
+        <button className="bg-accentPrimary">Click here!</button>
+      </div>
+    </div>
+  );
 }
 
 export default App;
