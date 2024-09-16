@@ -1,4 +1,3 @@
-
 import NavigationBar from "./components/NavigationBar";
 import {
   createBrowserRouter,
@@ -11,6 +10,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Destinations from "./pages/Destinations";
 import AboutMe from "./pages/AboutMe";
+import Blog from "./pages/Blog";
 
 function App() {
   // * Router
@@ -21,6 +21,7 @@ function App() {
         <Route element={<Contact />} path="contact"></Route>
         <Route element={<Destinations />} path="destinations"></Route>
         <Route element={<AboutMe />} path="about"></Route>
+        <Route element={<Blog />} path="/blog"></Route>
       </Route>
     )
   );

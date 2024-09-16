@@ -83,6 +83,9 @@ const NavigationBar = () => {
         <Link className="p-4" to="/destinations">
           Destinations
         </Link>
+        <Link className="p-4" to="/blog">
+          Blog
+        </Link>
         <button
           className="rounded-full bg-text h-6 w-fit text-accentPrimary flex justify-center items-center p-4"
           onClick={handleColorSchemeChange}
