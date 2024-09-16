@@ -35,33 +35,33 @@ const NavigationBar = () => {
   const HamburgerMenuIcon = () => {
     return (
       <div
-        className="h-4 w-6 relative bg-body cursor-pointer transition-all md:hidden"
+        className="h-4 w-6 relative bg-transparent cursor-pointer transition-all md:hidden"
         onClick={handleHamburgerMenu}
       >
         {/* Top line (shrinks when menu is open) */}
         <span
-          className={`absolute bg-accentPrimary h-[3px] w-full top-0 ${
+          className={`absolute bg-text h-[3px] w-full top-0 ${
             openHamburgerMenu ? "opacity-0" : "opacity-100"
           }`}
         ></span>
 
         {/* Middle line (rotates to 45 degrees) */}
         <span
-          className={`absolute bg-accentPrimary h-[3px] w-full top-[50%] ${
+          className={`absolute bg-text h-[3px] w-full top-[50%] ${
             openHamburgerMenu ? "rotate-45" : "rotate-0"
           }`}
         ></span>
 
         {/* Bottom line (rotates to -45 degrees) */}
         <span
-          className={`absolute bg-accentPrimary h-[3px] w-full top-[50%] ${
+          className={`absolute bg-text h-[3px] w-full top-[50%] ${
             openHamburgerMenu ? "-rotate-45" : "rotate-0"
           }`}
         ></span>
 
         {/* Bottom-most line (shrinks when menu is open) */}
         <span
-          className={`absolute bg-accentPrimary h-[3px] w-full top-[100%] ${
+          className={`absolute bg-text h-[3px] w-full top-[100%] ${
             openHamburgerMenu ? "opacity-0" : "opacity-100"
           }`}
         ></span>
