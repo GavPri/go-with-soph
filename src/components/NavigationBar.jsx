@@ -117,7 +117,7 @@ const NavigationBar = () => {
   };
 
   return (
-    <div className="w-screen h-24 bg-body flex justify-between items-center p-6">
+    <div className="absolute top-0 w-screen h-24 bg-transparent flex justify-between items-center p-6">
       <h1 className="text-text font-bold font-qs">GoWithSoph</h1>
       <div className="hidden md:flex justify-between items-center font-qs text-text">
         <NavLinks />
