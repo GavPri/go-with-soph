@@ -1,7 +1,18 @@
 import { useEffect, useState } from "react";
 import NavigationBar from "./components/NavigationBar";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from "react-router-dom";
 
 function App() {
+  // * Router
+  const router = createBrowserRouter(createRoutesFromElements(
+    <Route path="/" element={<Root />} 
+    ></Route>
+  ));
+
   // * useEffect to handle theme changes
   useEffect(() => {
     // If the user has selected an theme, get that theme
