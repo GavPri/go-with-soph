@@ -41,11 +41,17 @@ const NavigationBar = () => {
       </div>
     );
   };
+  const MobileDropDownMenu = () => {
+    return (
+      <div className="h-[calc(100%-96px)] w-screen bg-body absolute top-24 left-0"></div>
+    );
+  };
 
   return (
     <div className="w-screen h-24 bg-body flex justify-between items-center p-6">
       <h1 className="text-text font-bold">GoWithSoph</h1>
       <HamburgerMenuIcon />
+      <MobileDropDownMenu />
     </div>
   );
 };
