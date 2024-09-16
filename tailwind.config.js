@@ -9,6 +9,9 @@ module.exports = {
         accentPrimary: "rgba(var(--accent-primary))",
         accentSecondary: "rgba(var(--accent-secondary))",
       },
+      transitionProperty: {
+        height: "height",
+      },
     },
   },
   plugins: [],

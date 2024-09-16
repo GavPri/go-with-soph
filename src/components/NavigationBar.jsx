@@ -21,7 +21,7 @@ const NavigationBar = () => {
         {/* Middle line (rotates to 45 degrees) */}
         <span
           className={`absolute bg-accentPrimary h-[3px] w-full top-[50%] ${
-            openHamburgerMenu ? "transition-transform" : "transition-transform"
+            openHamburgerMenu ? "rotate-45" : "rotate-0"
           }`}
         ></span>
 
@@ -43,7 +43,9 @@ const NavigationBar = () => {
   };
   const MobileDropDownMenu = () => {
     return (
-      <div className="h-[calc(100%-96px)] w-screen bg-body absolute top-24 left-0"></div>
+      <div
+        className={`h-[calc(100%-96px)] w-screen bg-body absolute left-0 top-24 transition-transform duration-500 ease-out`}
+      ></div>
     );
   };
 
