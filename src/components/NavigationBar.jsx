@@ -14,7 +14,7 @@ const NavigationBar = () => {
         {/* Top line (shrinks when menu is open) */}
         <span
           className={`absolute bg-accentPrimary h-[3px] w-full top-0 ${
-            openHamburgerMenu ? "w-0" : "w-full"
+            openHamburgerMenu ? "opacity-0" : "opacity-100"
           }`}
         ></span>
 
@@ -35,7 +35,7 @@ const NavigationBar = () => {
         {/* Bottom-most line (shrinks when menu is open) */}
         <span
           className={`absolute bg-accentPrimary h-[3px] w-full top-[100%] ${
-            openHamburgerMenu ? "w-0" : "w-full"
+            openHamburgerMenu ? "opacity-0" : "opacity-100"
           }`}
         ></span>
       </div>
@@ -44,7 +44,11 @@ const NavigationBar = () => {
   const MobileDropDownMenu = () => {
     return (
       <div
-        className={`h-[calc(100%-96px)] w-screen bg-body absolute left-0 top-24 transition-transform duration-500 ease-out`}
+        className={`${
+          openHamburgerMenu
+            ? "max-h-[calc(100%-96px)] bg-body"
+            : "max-h-0 bg-transparent"
+        } w-screen bg-body absolute left-0 top-24 transition-all duration-500 ease-in-out`}
       ></div>
     );
   };
