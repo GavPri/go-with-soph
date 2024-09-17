@@ -8,6 +8,10 @@ const RegisterUser = () => {
         <form className="w-10/12 h-[80%] bg-body border-2 border-accentPrimary mt-24 rounded-md">
         
         </form>
+        {/* image div */}
+        <div>
+          <img src="" alt="" />
+        </div>
       </div>
     </div>
   );
