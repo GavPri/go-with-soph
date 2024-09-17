@@ -35,7 +35,7 @@ const NavigationBar = () => {
   const HamburgerMenuIcon = () => {
     return (
       <div
-        className="h-4 w-6 relative bg-transparent cursor-pointer transition-all md:hidden"
+        className="h-4 w-6 relative bg-transparent cursor-pointer transition-all lg:hidden"
         onClick={handleHamburgerMenu}
       >
         {/* Top line (shrinks when menu is open) */}
@@ -125,7 +125,7 @@ const NavigationBar = () => {
   return (
     <div className="absolute top-0 w-screen h-24 bg-transparent flex justify-between items-center p-6">
       <h1 className="text-text font-bold font-qs">GoWithSoph</h1>
-      <div className="hidden md:flex justify-between items-center font-qs text-text">
+      <div className="hidden lg:flex justify-between items-center font-qs text-text">
         <NavLinks />
       </div>
       <HamburgerMenuIcon />
