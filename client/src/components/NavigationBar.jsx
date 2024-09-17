@@ -74,6 +74,9 @@ const NavigationBar = () => {
         <Link className="p-4 text-2xl md:text-xl md:font-bold" to="/">
           Home
         </Link>
+        <Link className="p-4 text-2xl md:text-xl md:font-bold" to="/blog">
+          Blog
+        </Link>
         <Link className="p-4 text-2xl md:text-xl md:font-bold" to="/about">
           About
         </Link>
@@ -86,8 +89,8 @@ const NavigationBar = () => {
         >
           Destinations
         </Link>
-        <Link className="p-4 text-2xl md:text-xl md:font-bold" to="/blog">
-          Blog
+        <Link className="p-4 text-2xl md:text-xl md:font-bold" to="/register">
+          Register
         </Link>
         <button
           className="rounded-full bg-text h-6 w-fit text-accentPrimary flex justify-center items-center p-4"

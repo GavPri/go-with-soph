@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Destinations from "./pages/Destinations";
 import AboutMe from "./pages/AboutMe";
 import Blog from "./pages/Blog";
+import RegisterUser from "./pages/authPages/RegisterUser";
 
 function App() {
   // * Router
@@ -18,6 +19,7 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
         <Route index element={<Home />}></Route>
+        <Route element={<RegisterUser/>} path="/register"></Route>
         <Route element={<Contact />} path="contact"></Route>
         <Route element={<Destinations />} path="destinations"></Route>
         <Route element={<AboutMe />} path="about"></Route>
