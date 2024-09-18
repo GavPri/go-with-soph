@@ -7,7 +7,7 @@ const RegisterUser = () => {
     <div className="w-screen h-screen bg-body">
       {/* Form Wrapper */}
       <div className="w-full h-full bg-transparent flex justify-center items-center lg:flex-row lg:space-x-4 lg:justify-evenly">
-        <form className="w-10/12 h-[80%] bg-body border-2 border-accentPrimary mt-24 rounded-md lg:w-1/3 flex flex-col items-center">
+        <form className="w-10/12 h-[80%] bg-body  mt-24 rounded-md lg:w-1/3 flex flex-col items-center">
           <div>
             <h2 className="text-text font-qs text-2xl mt-4">
               <MdOutlineModeOfTravel size={30} className="mx-auto mb-4" />
