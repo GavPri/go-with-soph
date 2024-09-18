@@ -24,9 +24,14 @@ const RegisterUser = () => {
   };
 
   // TODO - handle submit function with axios.
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
     // TODO for submission logic
+    try {
+      
+    } catch (error) {
+      
+    }
     console.log(formData);
     navigate("/");
   };
