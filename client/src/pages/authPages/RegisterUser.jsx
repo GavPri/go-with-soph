@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineModeOfTravel } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+// TODO import axios
 
 const RegisterUser = () => {
-  // TODO inicilise useNavigate
+  // * inicilise useNavigate
   const navigate = useNavigate();
   // * state for form data.
   const [formData, setFormData] = useState({
@@ -12,7 +13,7 @@ const RegisterUser = () => {
     username: "",
     password: "",
   });
-  // TODO - handleChange function for form data.
+  // * - handleChange function for form data.
   const handleFormDataChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({
@@ -29,7 +30,6 @@ const RegisterUser = () => {
     navigate("/");
   };
 
-  // TODO - add values to form inputs & add on submit to form.
   return (
     <div className="w-screen h-screen bg-body">
       {/* Form Wrapper */}
