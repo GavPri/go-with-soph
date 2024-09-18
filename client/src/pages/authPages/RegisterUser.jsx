@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineModeOfTravel } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const RegisterUser = () => {
+  // TODO inicilise useNavigate
+  const navigate = useNavigate();
   // * state for form data.
   const [formData, setFormData] = useState({
     email: "",
@@ -23,6 +26,7 @@ const RegisterUser = () => {
     event.preventDefault();
     // TODO for submission logic
     console.log(formData);
+    navigate("/");
   };
 
   // TODO - add values to form inputs & add on submit to form.
