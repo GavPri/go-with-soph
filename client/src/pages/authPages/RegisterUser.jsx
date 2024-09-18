@@ -3,14 +3,24 @@ import { Link } from "react-router-dom";
 import { MdOutlineModeOfTravel } from "react-icons/md";
 
 const RegisterUser = () => {
-  // TODO - state for form data. 
+  // * state for form data.
   const [formData, setFormData] = useState({
-    email: '',
-    name:'',
-    password:'',
-  })
+    email: "",
+    name: "",
+    password: "",
+  });
   // TODO - handleChange function for form data.
-  // TODO - handle submit function with axios. 
+  const handleFormDataChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  // TODO - handle submit function with axios.
+
+  // TODO - add values to form inputs & add on submit to form.
   return (
     <div className="w-screen h-screen bg-body">
       {/* Form Wrapper */}
@@ -19,7 +29,6 @@ const RegisterUser = () => {
           <div>
             <h2 className="text-text font-qs text-2xl mt-4">
               <MdOutlineModeOfTravel size={30} className="mx-auto mb-4" />
-              
               GoWithSoph
             </h2>
           </div>
@@ -27,6 +36,7 @@ const RegisterUser = () => {
             Email
           </label>
           <input
+            value={formData.email}
             type="text"
             name="email"
             required
@@ -37,6 +47,7 @@ const RegisterUser = () => {
             Name
           </label>
           <input
+            value={formData.name}
             type="text"
             name="email"
             required
@@ -47,6 +58,7 @@ const RegisterUser = () => {
             Password
           </label>
           <input
+            value={formData.password}
             type="password"
             name="password"
             required
