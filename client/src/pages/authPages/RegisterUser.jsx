@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { MdOutlineModeOfTravel } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 // TODO import axios
+import axios from "axios";
 
 const RegisterUser = () => {
   // * inicilise useNavigate
