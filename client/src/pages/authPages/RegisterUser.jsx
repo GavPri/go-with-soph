@@ -6,7 +6,7 @@ const RegisterUser = () => {
   // * state for form data.
   const [formData, setFormData] = useState({
     email: "",
-    name: "",
+    username: "",
     password: "",
   });
   // TODO - handleChange function for form data.
@@ -19,13 +19,21 @@ const RegisterUser = () => {
   };
 
   // TODO - handle submit function with axios.
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    // TODO for submission logic
+    console.log(formData);
+  };
 
   // TODO - add values to form inputs & add on submit to form.
   return (
     <div className="w-screen h-screen bg-body">
       {/* Form Wrapper */}
       <div className="w-full h-full bg-transparent flex justify-center items-center lg:flex-row lg:space-x-4 lg:justify-evenly">
-        <form className="w-10/12 h-[80%] bg-body mt-24 rounded-md lg:w-1/3 flex flex-col items-center">
+        <form
+          className="w-10/12 h-[80%] bg-body mt-24 rounded-md lg:w-1/3 flex flex-col items-center"
+          onSubmit={handleFormSubmit}
+        >
           <div>
             <h2 className="text-text font-qs text-2xl mt-4">
               <MdOutlineModeOfTravel size={30} className="mx-auto mb-4" />
@@ -48,10 +56,10 @@ const RegisterUser = () => {
             Name
           </label>
           <input
-            value={formData.name}
+            value={formData.username}
             onChange={handleFormDataChange}
             type="text"
-            name="email"
+            name="username"
             required
             className="rounded-sm p-4 font-qs mb-4 w-3/4 my-4 focus:border-accentPrimary focus:ring-accentPrimary focus:ring-2 focus:outline-none text-text bg-body placeholder:text-text placeholder:italic border-b-2 border-accentPrimary"
             placeholder="Username"
