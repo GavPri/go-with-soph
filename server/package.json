@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"nodemon index.js\" \"start http://localhost:7000\""
+    "dev": "concurrently \"nodemon index.js\" \"start http://localhost:7000\"",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
