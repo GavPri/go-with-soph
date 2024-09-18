@@ -28,12 +28,12 @@ const RegisterUser = () => {
     event.preventDefault();
     // TODO for submission logic
     try {
-      
+      const response = await axios.post("", formData);
+      console.log(response.data);
+      navigate("/");
     } catch (error) {
-      
+      console.log(error);
     }
-    console.log(formData);
-    navigate("/");
   };
 
   return (
